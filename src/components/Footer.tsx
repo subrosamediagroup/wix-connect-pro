@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "@/assets/logo.png";
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Footer = () => (
@@ -7,8 +8,7 @@ const Footer = () => (
       <div className="grid gap-8 md:grid-cols-4">
         {/* Brand */}
         <div>
-          <h3 className="font-display text-2xl font-bold">Pizza Rays</h3>
-          <p className="mt-1 text-xs uppercase tracking-[0.2em] text-primary-foreground/50">Est. 1962</p>
+          <img src={logo} alt="Pizza Rays logo" className="h-16 w-auto brightness-0 invert" />
           <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
             Tradition meets taste. From Lawrence, MA to the Sunshine State.
           </p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -20,13 +21,8 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm text-primary-foreground">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
-        <Link to="/" className="flex flex-col leading-tight">
-          <span className="font-display text-2xl font-bold tracking-tight text-primary-foreground">
-            Pizza Rays
-          </span>
-          <span className="text-[10px] uppercase tracking-[0.25em] text-primary-foreground/60">
-            Est. 1962 · Lawrence, MA
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src={logo} alt="Pizza Rays - Made Old School The Ray Way, Est. 1962" className="h-12 sm:h-14 w-auto" />
         </Link>
 
         {/* Desktop */}
