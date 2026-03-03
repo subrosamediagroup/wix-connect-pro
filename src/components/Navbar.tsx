@@ -38,7 +38,7 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
-          <a href="tel:+15551234567">
+          <a href="tel:+13863667805">
             <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
               <Phone className="h-3.5 w-3.5" /> Call Us
             </Button>
@@ -75,7 +75,7 @@ const Navbar = () => {
                   {l.label}
                 </Link>
               ))}
-              <a href="tel:+15551234567" className="mt-2">
+              <a href="tel:+13863667805" className="mt-2">
                 <Button className="w-full gap-1.5 bg-primary hover:bg-primary/90">
                   <Phone className="h-4 w-4" /> Call Us
                 </Button>
