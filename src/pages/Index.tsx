@@ -35,9 +35,9 @@ const Index = () =>
               View Menu
             </Button>
           </Link>
-          <Link to="/location">
+          <Link to="/order">
             <Button size="lg" variant="outline" className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10 text-lg px-8">
-              Visit Us
+              Order Now
             </Button>
           </Link>
         </motion.div>
