@@ -4,11 +4,13 @@ import { Menu, X, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
+import CartSheet from "@/components/CartSheet";
 
 const links = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
   { to: "/menu", label: "Menu" },
+  { to: "/order", label: "Order Online" },
   { to: "/location", label: "Location" },
   { to: "/gallery", label: "Gallery" },
   { to: "/contact", label: "Contact" },
@@ -38,6 +40,7 @@ const Navbar = () => {
               {l.label}
             </Link>
           ))}
+          <CartSheet />
           <a href="tel:+13863667805">
             <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
               <Phone className="h-3.5 w-3.5" /> Call Us
