@@ -12,8 +12,8 @@ const links = [
   { to: "/about", label: "About" },
   { to: "/menu", label: "Menu" },
   { to: "/order", label: "Order" },
-  { to: "/location", label: "Location" },
   { to: "/gallery", label: "Gallery" },
+  { to: "/location", label: "Location" },
   { to: "/contact", label: "Contact" },
 ];
 
