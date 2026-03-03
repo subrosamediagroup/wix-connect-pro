@@ -46,6 +46,16 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Steak & Cheese", desc: "Steak with Grilled Peppers, Onions, Mushrooms, and Provolone Cheese", price: "$12.99" },
     { name: "Steak & Cheese Bomb", desc: "Steak with Grilled Peppers, Onions, Mushrooms, Salami, and Provolone Cheese", price: "$13.99" },
   ],
+  Calzones: [
+    { name: "Ray's Original Italian", desc: "", price: "$16.99" },
+    { name: "Coldcut Calzone", desc: "Salami, Mortadella, Ham", price: "$17.99" },
+    { name: "Steak & Cheese", desc: "", price: "$17.99" },
+    { name: "Veggie", desc: "Pepper, Onion, Tomato, and Mushroom", price: "$17.99" },
+    { name: "Pastrami", desc: "", price: "$17.99" },
+    { name: "Meatball Parm", desc: "", price: "$17.99" },
+    { name: "Sausage", desc: "Pepper and Onion", price: "$17.99" },
+    { name: "Steak Bomb", desc: "Salami, Pepper, Onion, and Mushroom", price: "$20.99" },
+  ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
     { name: "Mozzarella Sticks", desc: "Hand-breaded, served with marinara", price: "$7.99" },
@@ -153,6 +163,12 @@ const MenuPage = () => {
             <div className="text-center mb-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Hot Submarines</h2>
               <p className="text-muted-foreground text-sm">Salt, Pepper, and Oregano by Request. Add cheese $1.50 if not included.</p>
+            </div>
+          )}
+          {active === "Calzones" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Calzones</h2>
+              <p className="text-muted-foreground text-sm">A Blend Of Mozzarella And Provolone Cheese. Marinara By Request - On The Side.</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
