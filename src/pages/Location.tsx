@@ -62,7 +62,7 @@ const Location = () => (
           <h2 className="font-display text-2xl font-bold text-foreground mb-8">Amenities</h2>
           <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 max-w-lg mx-auto">
             {[
-              { icon: Car, label: "Free Parking" },
+              { icon: Car, label: "Convenient Parking" },
               { icon: Sun, label: "Outdoor Patio" },
               { icon: Wifi, label: "Free Wi-Fi" },
             ].map((a, i) => (
