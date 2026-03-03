@@ -12,13 +12,7 @@ type MenuItem = { name: string; desc: string; price: string };
 
 const menuData: Record<string, MenuItem[]> = {
   "Italian Style Pizza": [],
-  "Specialty Pizzas": [
-    { name: "The Lawrence Original", desc: "Our 1962 secret recipe — a customer favorite for decades", price: "$18.99" },
-    { name: "Florida Sunshine", desc: "Grilled chicken, sun-dried tomatoes, artichoke hearts, garlic", price: "$17.99" },
-    { name: "BBQ Chicken", desc: "BBQ sauce, grilled chicken, red onion, cilantro, mozzarella", price: "$16.99" },
-    { name: "White Pizza", desc: "Ricotta, mozzarella, garlic, olive oil, fresh herbs", price: "$15.99" },
-    { name: "Veggie Supreme", desc: "Mushrooms, peppers, onions, olives, tomatoes, spinach", price: "$15.99" },
-  ],
+  "Specialty Pizzas": [],
   Submarines: [
     { name: "Italian Sub", desc: "Ham, salami, pepperoni, provolone, lettuce, tomato, oil & vinegar", price: "$11.99" },
     { name: "Meatball Parm", desc: "Homemade meatballs, marinara sauce, melted provolone", price: "$12.99" },
@@ -86,8 +80,6 @@ const MenuPage = () => {
                     <p className="text-muted-foreground text-sm mb-6">
                       Thin Crust With In-house Made Dough, Sauce, and Our Own Blended Mozzarella
                     </p>
-
-                    {/* Size & Cheese Price */}
                     <div className="mb-6">
                       <div className="grid grid-cols-3 gap-4 font-display font-semibold text-foreground border-b pb-2 mb-2">
                         <span></span>
@@ -100,25 +92,58 @@ const MenuPage = () => {
                         <span className="text-center text-primary font-bold">$16.99</span>
                       </div>
                     </div>
-
-                    {/* Toppings */}
                     <h3 className="font-display text-lg font-semibold text-foreground mb-3">Choice of Toppings</h3>
-
                     <div className="mb-4">
                       <p className="font-semibold text-foreground text-sm">Meat: $2.00 per topping</p>
                       <p className="text-muted-foreground text-sm">
                         Bacon, Ham, Sweet Sausage, Pepperoni, Meatball, Ground Beef
                       </p>
                     </div>
-
                     <div className="mb-4">
                       <p className="font-semibold text-foreground text-sm">Veggies: $1.50 per topping</p>
                       <p className="text-muted-foreground text-sm">
                         Mushroom, Pepper, Onion, Tomato, Black Olive, Pineapple, Fresh Spinach, Fresh Pressed Garlic
                       </p>
                     </div>
-
                     <p className="font-semibold text-foreground text-sm">Extra Cheese $1.50</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          ) : active === "Specialty Pizzas" ? (
+            <div className="max-w-2xl mx-auto">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+                <Card className="border bg-card">
+                  <CardContent className="p-6 sm:p-8">
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-2">SPECIALTY PIZZAS</h2>
+                    <p className="text-muted-foreground text-sm mb-6">
+                      All Specialty Pizzas Are Available As Calzones
+                    </p>
+                    <div className="grid grid-cols-3 gap-4 font-display font-semibold text-foreground border-b pb-2 mb-4">
+                      <span></span>
+                      <span className="text-center">Small 12"</span>
+                      <span className="text-center">Large 16"</span>
+                    </div>
+                    {[
+                      { name: "White", desc: "White Sauce and Cheese", small: "$14.99", large: "$18.99" },
+                      { name: "White Spinach", desc: "Feta Cheese", small: "$17.99", large: "$21.99" },
+                      { name: "Pastrami", desc: "Pickles and Mustard", small: "$17.99", large: "$21.99" },
+                      { name: "Rays Original", desc: "Onions, Tomato, Pickles, and hots topped with melted Provolone Cheese", small: "$17.99", large: "$21.99" },
+                      { name: "Buffalo Chicken", desc: "Buffalo and Ranch Drizzle", small: "$17.99", large: "$21.99" },
+                      { name: "Hawaiian", desc: "Red Sauce with Ham and Pineapple", small: "$17.99", large: "$21.99" },
+                      { name: "Hot Hawaiian", desc: "Red Sauce with Extra Ham and Pineapple with Hot Cherry Relish", small: "$19.99", large: "$23.99" },
+                      { name: "Steak & Cheese", desc: "", small: "$17.99", large: "$21.99" },
+                      { name: "Steak & Cheese Bomb", desc: "", small: "$19.99", large: "$23.99" },
+                    ].map((item, i) => (
+                      <div key={item.name} className="grid grid-cols-3 gap-4 items-center py-3 border-b border-border/50 last:border-0">
+                        <div>
+                          <span className="font-semibold text-foreground">{item.name}</span>
+                          {item.desc && <p className="text-muted-foreground text-sm">{item.desc}</p>}
+                        </div>
+                        <span className="text-center text-primary font-bold">{item.small}</span>
+                        <span className="text-center text-primary font-bold">{item.large}</span>
+                      </div>
+                    ))}
                   </CardContent>
                 </Card>
               </motion.div>
