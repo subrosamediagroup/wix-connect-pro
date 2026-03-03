@@ -23,6 +23,16 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Steak & Cheese", desc: "Available as Calzone.", price: "Sm $17.99 / Lg $21.99" },
     { name: "Steak & Cheese Bomb", desc: "Available as Calzone.", price: "Sm $19.99 / Lg $23.99" },
   ],
+  "Cold Submarines": [
+    { name: "Ray's Original Italian", desc: "Provolone, Ham, Salami, Mortadella", price: "$12.99" },
+    { name: "Ham & Cheese", desc: "Imported Ham and American Cheese", price: "$11.99" },
+    { name: "Salami & Cheese", desc: "Genoa Salami and Provolone", price: "$11.99" },
+    { name: "BLT Sub", desc: "Bacon, Lettuce, Tomato", price: "$11.99" },
+    { name: "Roast Turkey Breast", desc: "Home Baked Turkey Breast and Provolone", price: "$11.99" },
+    { name: "Chicken Salad", desc: "Home Made Chicken Salad, All White Meat", price: "$11.99" },
+    { name: "Tuna Salad", desc: "Home Made Tuna Salad", price: "$11.99" },
+    { name: "Roast Beef", desc: "", price: "$12.99" },
+  ],
   Submarines: [
     { name: "Italian Sub", desc: "Ham, salami, pepperoni, provolone, lettuce, tomato, oil & vinegar", price: "$11.99" },
     { name: "Meatball Parm", desc: "Homemade meatballs, marinara sauce, melted provolone", price: "$12.99" },
@@ -126,6 +136,12 @@ const MenuPage = () => {
             <div className="text-center mb-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Specialty Pizzas</h2>
               <p className="text-muted-foreground text-sm">All Specialty Pizzas Are Available As Calzones</p>
+            </div>
+          )}
+          {active === "Cold Submarines" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Cold Submarines</h2>
+              <p className="text-muted-foreground text-sm">Topped with onions, pickles, tomatoes, hots, oil, salt, pepper, and oregano.</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
