@@ -58,21 +58,6 @@ const About = () =>
       </div>
     </section>
 
-    {/* Story */}
-    <section className="py-20 px-4 bg-card">
-      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
-        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} alt="Pizza Rays interior" className="rounded-xl shadow-lg w-full h-80 object-cover" src="/lovable-uploads/861ba3ab-05cc-4679-b260-e4c8c0bfb6ca.png" />
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground">Our Roots</motion.h2>
-          <motion.p variants={fadeUp} custom={1} className="mt-4 text-muted-foreground leading-relaxed">
-            In 1962, a family with a passion for authentic Italian cuisine opened the doors of Pizza Rays in Lawrence, Massachusetts. What started as a small neighborhood pizzeria quickly became a beloved institution, known for hand-tossed dough, homemade sauces, and submarines piled high with the freshest ingredients.
-          </motion.p>
-          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
-            Every recipe has been passed down through generations, preserving the flavors that made our loyal customers keep coming back decade after decade.
-          </motion.p>
-        </motion.div>
-      </div>
-    </section>
 
     {/* Florida */}
     <section className="py-20 px-4 bg-card">
