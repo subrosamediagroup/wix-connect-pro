@@ -101,7 +101,7 @@ const BuildYourOwnPizza = () => {
                 <Pizza className="h-5 w-5 text-primary" />
               </div>
               <h2 className="font-display text-2xl font-bold text-foreground">
-                Build Your Own Pizza
+                Build Your Own Italian-Style Pizza
               </h2>
             </div>
             <p className="text-muted-foreground text-sm mb-6">
