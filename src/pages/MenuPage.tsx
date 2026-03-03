@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import menuHero from "@/assets/menu-hero.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
@@ -106,8 +107,9 @@ const MenuPage = () => {
 
   return (
     <>
-      <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
-        <div className="container mx-auto max-w-3xl">
+      <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center overflow-hidden">
+        <img src={menuHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" />
+        <div className="relative container mx-auto max-w-3xl">
           <motion.p initial="hidden" animate="visible" variants={fadeUp} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Our Menu</motion.p>
           <motion.h1 initial="hidden" animate="visible" variants={fadeUp} custom={1} className="font-display text-4xl sm:text-5xl font-bold mt-2">
             Taste the Tradition
