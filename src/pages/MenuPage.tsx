@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import menuHero from "@/assets/menu-hero.png";
 import { Card, CardContent } from "@/components/ui/card";
@@ -261,10 +262,15 @@ const MenuPage = () => {
           }
 
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground text-sm mb-4">Ready to order? Call us or visit in person!</p>
-            <a href="tel:+13863667805">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">Order Now — (386) 366-7805</Button>
-            </a>
+            <p className="text-muted-foreground text-sm mb-4">Ready to order? Call us or order online!</p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a href="tel:+13863667805">
+                <Button size="lg" className="bg-primary hover:bg-primary/90">Call in Order — (386) 366-7805</Button>
+              </a>
+              <Link to="/order">
+                <Button size="lg" variant="outline" className="border-primary hover:bg-primary/10 text-foreground">Order Online</Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
