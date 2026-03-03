@@ -81,10 +81,12 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Chef Salad", desc: "Rolled ham, mortadella, salami, provolone. Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$9.50" },
   ],
   Drinks: [
-    { name: "Fountain Soda", desc: "Coke, Diet Coke, Sprite, Dr Pepper", price: "$2.49" },
-    { name: "Italian Lemonade", desc: "Fresh-squeezed with a hint of basil", price: "$3.99" },
-    { name: "Iced Tea", desc: "Freshly brewed, sweetened or unsweetened", price: "$2.49" },
-    { name: "Bottled Water", desc: "Still or sparkling", price: "$1.99" },
+    { name: "Coca-Cola Products", desc: "", price: "$3.00" },
+    { name: "Domestic Beer", desc: "", price: "$4.00" },
+    { name: "Imported Beer", desc: "", price: "$4.75" },
+    { name: "Hard Teas, Seltzers, Lemonade", desc: "", price: "$5.25" },
+    { name: "Wine", desc: "", price: "$6.00" },
+    { name: "Iced and Hot Coffee", desc: "", price: "$2.25" },
   ],
 };
 
