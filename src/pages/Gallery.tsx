@@ -3,6 +3,16 @@ import pepperoniPizza from "@/assets/pepperoni-pizza.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
+import graceOriginal from "@/assets/grace-original.png";
+import fries from "@/assets/fries.png";
+import supremePizza from "@/assets/supreme-pizza.png";
+import onionRings from "@/assets/onion-rings.png";
+import sirloinTipKabob from "@/assets/sirloin-tip-kabob.png";
+import steakCheeseMushrooms from "@/assets/steak-cheese-mushrooms.png";
+import superBeef from "@/assets/super-beef.png";
+import whiteSpinachPizza from "@/assets/white-spinach-pizza.png";
+import pepperEggCheese from "@/assets/pepper-egg-cheese.png";
+import greekSalad from "@/assets/greek-salad.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -12,6 +22,16 @@ const fadeUp = {
 const images = [
   { src: pepperoniPizza, alt: "Our signature pepperoni pizza", label: "Signature Pizza" },
   { src: subSandwich, alt: "Delicious submarine sandwich", label: "Submarines" },
+  { src: supremePizza, alt: "Supreme pizza with sausage and peppers", label: "Supreme Pizza" },
+  { src: whiteSpinachPizza, alt: "White pizza with spinach", label: "White Spinach Pizza" },
+  { src: graceOriginal, alt: "Ray's Original Italian sub", label: "Ray's Original Italian" },
+  { src: sirloinTipKabob, alt: "Sirloin tip kabob sub", label: "Sirloin Tip Kabob" },
+  { src: steakCheeseMushrooms, alt: "Steak and cheese with mushrooms", label: "Steak & Cheese" },
+  { src: pepperEggCheese, alt: "Pepper egg and cheese sub", label: "Pepper Egg & Cheese" },
+  { src: superBeef, alt: "Super beef three ways", label: "Super Beef" },
+  { src: fries, alt: "Golden french fries with ketchup", label: "French Fries" },
+  { src: onionRings, alt: "Crispy onion rings with sauce", label: "Onion Rings" },
+  { src: greekSalad, alt: "Fresh Greek salad with pita", label: "Greek Salad" },
   { src: restaurantInterior, alt: "Cozy indoor dining area", label: "Indoor Dining" },
   { src: outdoorPatio, alt: "Sunny outdoor patio", label: "Outdoor Patio" },
 ];
