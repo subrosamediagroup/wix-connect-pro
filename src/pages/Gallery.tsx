@@ -56,7 +56,7 @@ const Gallery = () => (
           </motion.div>
         ))}
       </div>
-      <p className="text-center text-muted-foreground text-sm mt-8">More photos coming soon! Follow us on social media for the latest.</p>
+      <p className="text-center text-muted-foreground text-sm mt-8">Follow us on social media for the latest.</p>
     </section>
   </>
 );
