@@ -3,6 +3,7 @@ import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
 import pizzaRayTruck from "@/assets/pizza-ray-truck.png";
 import pizzaRayTruckSign from "@/assets/pizza-ray-truck-sign.png";
+import pizzaRayShop from "@/assets/pizza-ray-shop.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -58,6 +59,22 @@ const About = () =>
       </div>
     </section>
 
+    {/* Old School, The Ray Way */}
+    <section className="py-20 px-4 bg-background">
+      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayShop} alt="The original Pizza Rays Submarines storefront" className="rounded-xl shadow-lg w-full h-96 object-cover" />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Made Old School</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">The Ray Way</motion.h2>
+          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
+            My dad's vision was simple but powerful: keep it "Old School." Every dish was made with only the freshest ingredients, scratch-prepared, and served with expert care. From submarine rolls baked fresh daily to pizzas made with hand-crafted dough, blended cheeses, and his signature Italian tomato sauce, his commitment to consistency and quality built a loyal following.
+          </motion.p>
+          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
+            Customers returned time and again, not just for the food, but for the experience. This was the essence of my father's philosophy—"Old School, the Ray Way."
+          </motion.p>
+        </motion.div>
+      </div>
+    </section>
 
     {/* Florida */}
     <section className="py-20 px-4 bg-card">
