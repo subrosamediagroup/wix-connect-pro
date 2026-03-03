@@ -33,13 +33,16 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Tuna Salad", desc: "Home Made Tuna Salad", price: "$11.99" },
     { name: "Roast Beef", desc: "", price: "$12.99" },
   ],
-  Submarines: [
-    { name: "Italian Sub", desc: "Ham, salami, pepperoni, provolone, lettuce, tomato, oil & vinegar", price: "$11.99" },
-    { name: "Meatball Parm", desc: "Homemade meatballs, marinara sauce, melted provolone", price: "$12.99" },
-    { name: "Chicken Parm", desc: "Breaded chicken cutlet, marinara, melted mozzarella", price: "$12.99" },
-    { name: "Turkey & Cheese", desc: "Oven-roasted turkey, provolone, lettuce, tomato, mayo", price: "$11.99" },
-    { name: "Steak & Cheese", desc: "Shaved steak, melted American cheese, grilled onions & peppers", price: "$13.99" },
-    { name: "Veggie Sub", desc: "Grilled vegetables, provolone, pesto, mixed greens", price: "$10.99" },
+  "Hot Submarines": [
+    { name: "Pastrami and Cheese", desc: "Thin Sliced Grilled with Yellow Mustard, Pickles, and Provolone", price: "$12.99" },
+    { name: "Italian Meatball Parm", desc: "In-House Made Meatballs with Marinara and Provolone", price: "$12.99" },
+    { name: "Italian Sausage Parm", desc: "In-House Made Sausage with Marinara and Provolone", price: "$12.99" },
+    { name: "Italian Sausage", desc: "Grilled Sweet Sausage with Peppers and Onions", price: "$12.99" },
+    { name: "Pepper Egg and Cheese", desc: "Pepper Egg Omelette Style with Provolone and Bead of Marinara", price: "$12.99" },
+    { name: "Sirloin Tip Kabob", desc: "Our Own House Marinate Sirloin Tips Grilled with Peppers and Onions", price: "$12.99" },
+    { name: "Chicken Tender Parm", desc: "In-House Made Breast Meat Tenders", price: "$12.99" },
+    { name: "Cheeseburger Sub", desc: "", price: "$12.99" },
+    { name: "French Dip", desc: "", price: "$13.99" },
   ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
@@ -142,6 +145,12 @@ const MenuPage = () => {
             <div className="text-center mb-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Cold Submarines</h2>
               <p className="text-muted-foreground text-sm">Topped with onions, pickles, tomatoes, hots, oil, salt, pepper, and oregano.</p>
+            </div>
+          )}
+          {active === "Hot Submarines" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Hot Submarines</h2>
+              <p className="text-muted-foreground text-sm">Salt, Pepper, and Oregano by Request. Add cheese $1.50 if not included.</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
