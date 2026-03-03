@@ -61,6 +61,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Regular Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$9.99" },
     { name: "Junior Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$7.99" },
   ],
+  Burgers: [
+    { name: "Hamburger", desc: "", price: "$5.99" },
+    { name: "Cheeseburger", desc: "Cheese: Provolone, American, Swiss, Mozzarella", price: "$6.99" },
+  ],
   "Ray's FC Tenders": [
     { name: "4 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$8.99" },
     { name: "6 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$13.99" },
@@ -80,6 +84,11 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Greek Salad", desc: "Pepperoncini, feta cheese, and kalamata olives. Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$8.99" },
     { name: "Chef Salad", desc: "Rolled ham, mortadella, salami, provolone. Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$9.50" },
   ],
+  "Kids Menu": [
+    { name: "Kids Chicken Tenders", desc: "In-House Made Breast Meat Tenders, 2 Pieces with Side of Sauce", price: "$5.99" },
+    { name: "Kids Roast Beef", desc: "In-House Made Roast Beef on a Small Burger Roll", price: "$5.99" },
+    { name: "Kids Cheeseburger", desc: "", price: "$5.99" },
+  ],
   Drinks: [
     { name: "Coca-Cola Products", desc: "", price: "$3.00" },
     { name: "Domestic Beer", desc: "", price: "$4.00" },
@@ -87,15 +96,6 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Hard Teas, Seltzers, Lemonade", desc: "", price: "$5.25" },
     { name: "Wine", desc: "", price: "$6.00" },
     { name: "Iced and Hot Coffee", desc: "", price: "$2.25" },
-  ],
-  "Kids Menu": [
-    { name: "Kids Chicken Tenders", desc: "In-House Made Breast Meat Tenders, 2 Pieces with Side of Sauce", price: "$5.99" },
-    { name: "Kids Roast Beef", desc: "In-House Made Roast Beef on a Small Burger Roll", price: "$5.99" },
-    { name: "Kids Cheeseburger", desc: "", price: "$5.99" },
-  ],
-  Burgers: [
-    { name: "Hamburger", desc: "", price: "$5.99" },
-    { name: "Cheeseburger", desc: "Cheese: Provolone, American, Swiss, Mozzarella", price: "$6.99" },
   ],
 };
 
