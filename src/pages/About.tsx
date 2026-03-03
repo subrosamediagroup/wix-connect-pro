@@ -28,7 +28,7 @@ const About = () =>
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
         <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayTruck} alt="Ray with the original Pizza Rays food truck" className="rounded-xl shadow-lg w-full h-96 object-cover" />
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">How It Started</motion.p>
           <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">A Food Truck &amp; A Dream</motion.h2>
           <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
