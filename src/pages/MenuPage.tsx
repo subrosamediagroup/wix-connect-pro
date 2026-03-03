@@ -75,6 +75,11 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "French Fries", desc: "Crispy golden fries, seasoned", price: "$4.99" },
     { name: "Onion Rings", desc: "Beer-battered, golden fried", price: "$6.99" },
   ],
+  Salads: [
+    { name: "Garden Salad", desc: "Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$7.99" },
+    { name: "Greek Salad", desc: "Pepperoncini, feta cheese, and kalamata olives. Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$8.99" },
+    { name: "Chef Salad", desc: "Rolled ham, mortadella, salami, provolone. Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$9.50" },
+  ],
   Drinks: [
     { name: "Fountain Soda", desc: "Coke, Diet Coke, Sprite, Dr Pepper", price: "$2.49" },
     { name: "Italian Lemonade", desc: "Fresh-squeezed with a hint of basil", price: "$3.99" },
@@ -201,6 +206,14 @@ const MenuPage = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Ray's FC Tenders</h2>
               <p className="text-muted-foreground text-sm">In-House Made Strips of Breast Meat, Original or Grilled with Choice of Sauce.</p>
               <p className="text-muted-foreground text-sm mt-1">Sauces: Buffalo — Ranch — BBQ</p>
+            </div>
+          )}
+          {active === "Salads" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Salads</h2>
+              <p className="text-muted-foreground text-sm">Choice of Salad Dressings: House — Ranch — Italian — Poppy Seed</p>
+              <p className="text-muted-foreground text-sm mt-2 font-semibold">Salad Toppings</p>
+              <p className="text-muted-foreground text-sm">Tuna Salad $4.50 · Grilled Chicken $4.50 · Chicken Salad $4.50 · Grilled Sirloin Tip $5.00</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
