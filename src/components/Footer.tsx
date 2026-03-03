@@ -8,7 +8,7 @@ const Footer = () => (
       <div className="grid gap-8 md:grid-cols-4">
         {/* Brand */}
         <div>
-          <img src={logo} alt="Pizza Rays logo" className="h-16 w-auto brightness-0 invert" />
+          <img src={logo} alt="Pizza Rays logo" className="h-16 w-auto" />
           <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
             Tradition meets taste. From Lawrence, MA to the Sunshine State.
           </p>
