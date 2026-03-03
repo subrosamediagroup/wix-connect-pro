@@ -2,33 +2,33 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import { Facebook, Instagram, Twitter, MapPin, Phone, Mail, Clock } from "lucide-react";
 
-const Footer = () => (
-  <footer className="bg-foreground text-primary-foreground">
+const Footer = () =>
+<footer className="bg-foreground text-primary-foreground">
     <div className="container mx-auto px-4 py-12">
       <div className="grid gap-8 md:grid-cols-4">
         {/* Brand */}
         <div>
           <img src={logo} alt="Pizza Rays logo" className="h-16 w-auto" />
-          <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">
-            Tradition meets taste. From Lawrence, MA to the Sunshine State.
-          </p>
+          <p className="mt-4 text-sm text-primary-foreground/70 leading-relaxed">Tradition meets taste.
+
+        </p>
           <div className="mt-4 flex gap-3">
-            {[Facebook, Instagram, Twitter].map((Icon, i) => (
-              <a key={i} href="#" className="rounded-full bg-primary-foreground/10 p-2 transition hover:bg-primary">
+            {[Facebook, Instagram, Twitter].map((Icon, i) =>
+          <a key={i} href="#" className="rounded-full bg-primary-foreground/10 p-2 transition hover:bg-primary">
                 <Icon className="h-4 w-4" />
               </a>
-            ))}
+          )}
           </div>
         </div>
 
         {/* Quick Links */}
         <div>
           <h4 className="font-display text-lg font-semibold mb-4">Quick Links</h4>
-          {["Home", "About", "Menu", "Location", "Gallery", "Contact"].map((l) => (
-            <Link key={l} to={l === "Home" ? "/" : `/${l.toLowerCase()}`} className="block py-1 text-sm text-primary-foreground/70 hover:text-primary transition-colors">
+          {["Home", "About", "Menu", "Location", "Gallery", "Contact"].map((l) =>
+        <Link key={l} to={l === "Home" ? "/" : `/${l.toLowerCase()}`} className="block py-1 text-sm text-primary-foreground/70 hover:text-primary transition-colors">
               {l}
             </Link>
-          ))}
+        )}
         </div>
 
         {/* Hours */}
@@ -54,7 +54,7 @@ const Footer = () => (
         © {new Date().getFullYear()} Pizza Rays Submarines. All rights reserved.
       </div>
     </div>
-  </footer>
-);
+  </footer>;
+
 
 export default Footer;
