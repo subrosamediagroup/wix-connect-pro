@@ -75,7 +75,7 @@ const CartSheet = () => {
   return (
     <Sheet onOpenChange={(open) => { if (!open) resetAndClose(); }}>
       <SheetTrigger asChild>
-        <Button size="sm" variant="outline" className="relative gap-1.5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+        <Button size="sm" className="relative gap-1.5 bg-primary hover:bg-primary/90">
           <ShoppingCart className="h-4 w-4" />
           <span className="hidden sm:inline">Cart</span>
           {totalItems > 0 && (

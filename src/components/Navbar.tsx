@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone, User, LogOut } from "lucide-react";
+import { Menu, X, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
@@ -46,7 +46,7 @@ const Navbar = () => {
           {user ? (
             <>
               <Link to="/order-history">
-                <Button size="sm" variant="outline" className="gap-1.5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
                   <User className="h-3.5 w-3.5" /> My Orders
                 </Button>
               </Link>
@@ -56,16 +56,11 @@ const Navbar = () => {
             </>
           ) : (
             <Link to="/auth">
-              <Button size="sm" variant="outline" className="gap-1.5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+              <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
                 <User className="h-3.5 w-3.5" /> Sign In
               </Button>
             </Link>
           )}
-          <a href="tel:+13863667805">
-            <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
-              <Phone className="h-3.5 w-3.5" /> Call Us
-            </Button>
-          </a>
         </div>
 
         {/* Mobile toggle */}
@@ -112,11 +107,6 @@ const Navbar = () => {
                   Sign In
                 </Link>
               )}
-              <a href="tel:+13863667805" className="mt-2">
-                <Button className="w-full gap-1.5 bg-primary hover:bg-primary/90">
-                  <Phone className="h-4 w-4" /> Call Us
-                </Button>
-              </a>
             </div>
           </motion.div>
         )}
