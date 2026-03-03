@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Phone } from "lucide-react";
+import { Menu, X, Phone, User, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 import { motion, AnimatePresence } from "framer-motion";
 import CartSheet from "@/components/CartSheet";
+import { useAuth } from "@/context/AuthContext";
 
 const links = [
   { to: "/", label: "Home" },
@@ -19,6 +20,7 @@ const links = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-foreground/95 backdrop-blur-sm text-primary-foreground">
@@ -41,6 +43,24 @@ const Navbar = () => {
             </Link>
           ))}
           <CartSheet />
+          {user ? (
+            <>
+              <Link to="/order-history">
+                <Button size="sm" variant="outline" className="gap-1.5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                  <User className="h-3.5 w-3.5" /> My Orders
+                </Button>
+              </Link>
+              <Button size="sm" variant="ghost" className="gap-1.5 text-primary-foreground/70 hover:text-primary-foreground hover:bg-primary-foreground/10" onClick={signOut}>
+                <LogOut className="h-3.5 w-3.5" /> Sign Out
+              </Button>
+            </>
+          ) : (
+            <Link to="/auth">
+              <Button size="sm" variant="outline" className="gap-1.5 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
+                <User className="h-3.5 w-3.5" /> Sign In
+              </Button>
+            </Link>
+          )}
           <a href="tel:+13863667805">
             <Button size="sm" className="gap-1.5 bg-primary hover:bg-primary/90">
               <Phone className="h-3.5 w-3.5" /> Call Us
@@ -78,6 +98,20 @@ const Navbar = () => {
                   {l.label}
                 </Link>
               ))}
+              {user ? (
+                <>
+                  <Link to="/order-history" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-sm font-medium text-primary-foreground/80 hover:bg-primary-foreground/10">
+                    My Orders
+                  </Link>
+                  <button onClick={() => { signOut(); setOpen(false); }} className="rounded-md px-3 py-2.5 text-sm font-medium text-left text-primary-foreground/80 hover:bg-primary-foreground/10">
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <Link to="/auth" onClick={() => setOpen(false)} className="rounded-md px-3 py-2.5 text-sm font-medium text-primary-foreground/80 hover:bg-primary-foreground/10">
+                  Sign In
+                </Link>
+              )}
               <a href="tel:+13863667805" className="mt-2">
                 <Button className="w-full gap-1.5 bg-primary hover:bg-primary/90">
                   <Phone className="h-4 w-4" /> Call Us
