@@ -1,12 +1,13 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Plus, Minus, Trash2 } from "lucide-react";
+import { ShoppingCart, Plus, Minus, Trash2, Loader2 } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const CartSheet = () => {
   const { items, updateQuantity, removeItem, clearCart, totalItems, totalPrice } = useCart();
@@ -14,15 +15,51 @@ const CartSheet = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [notes, setNotes] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!name.trim() || !phone.trim()) {
       toast({ title: "Please fill in your name and phone number", variant: "destructive" });
       return;
     }
-    setStep("confirmed");
-    clearCart();
+
+    setSubmitting(true);
+    try {
+      // Insert order
+      const { data: order, error: orderError } = await supabase
+        .from("orders")
+        .insert({
+          customer_name: name.trim(),
+          customer_phone: phone.trim(),
+          notes: notes.trim() || null,
+          total_price: totalPrice,
+        })
+        .select()
+        .single();
+
+      if (orderError) throw orderError;
+
+      // Insert order items
+      const orderItems = items.map((item) => ({
+        order_id: order.id,
+        category: item.category,
+        item_name: item.name,
+        price: item.price,
+        quantity: item.quantity,
+      }));
+
+      const { error: itemsError } = await supabase.from("order_items").insert(orderItems);
+      if (itemsError) throw itemsError;
+
+      setStep("confirmed");
+      clearCart();
+    } catch (err: any) {
+      console.error("Order submission error:", err);
+      toast({ title: "Failed to place order", description: err.message || "Please try again.", variant: "destructive" });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   const resetAndClose = () => {
@@ -120,10 +157,10 @@ const CartSheet = () => {
                 <span>Total</span>
                 <span className="text-primary">${totalPrice.toFixed(2)}</span>
               </div>
-              <Button className="w-full bg-primary hover:bg-primary/90" size="lg" onClick={handleSubmit}>
-                Place Order
+              <Button className="w-full bg-primary hover:bg-primary/90" size="lg" onClick={handleSubmit} disabled={submitting}>
+                {submitting ? <><Loader2 className="h-4 w-4 animate-spin mr-2" /> Placing Order...</> : "Place Order"}
               </Button>
-              <Button variant="ghost" className="w-full" onClick={() => setStep("cart")}>
+              <Button variant="ghost" className="w-full" onClick={() => setStep("cart")} disabled={submitting}>
                 Back to Cart
               </Button>
             </div>
