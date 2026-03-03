@@ -68,12 +68,12 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "12 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$25.99" },
   ],
   Sides: [
-    { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
-    { name: "Mozzarella Sticks", desc: "Hand-breaded, served with marinara", price: "$7.99" },
-    { name: "Garden Salad", desc: "Mixed greens, tomatoes, cucumbers, red onion, Italian dressing", price: "$6.99" },
-    { name: "Caesar Salad", desc: "Romaine, parmesan, croutons, house Caesar dressing", price: "$7.99" },
-    { name: "French Fries", desc: "Crispy golden fries, seasoned", price: "$4.99" },
-    { name: "Onion Rings", desc: "Beer-battered, golden fried", price: "$6.99" },
+    { name: "French Fries", desc: "", price: "Sm $3.99 / Lg $5.99" },
+    { name: "Onion Rings", desc: "", price: "Sm $4.99 / Lg $6.99" },
+    { name: "Fried Mushrooms", desc: "", price: "$8.50" },
+    { name: "Meatballs - 4 ct.", desc: "Sauce and Cheese", price: "$8.99" },
+    { name: "Sausage Balls - 4 ct.", desc: "Sauce and Cheese", price: "$8.99" },
+    { name: "Garlic Knots - 9 ct.", desc: "Cheese and A Side of Marinara", price: "$8.99" },
   ],
   Salads: [
     { name: "Garden Salad", desc: "Iceberg and romaine, tomato, and other seasonal vegetables served with pita", price: "$7.99" },
@@ -214,6 +214,13 @@ const MenuPage = () => {
               <p className="text-muted-foreground text-sm">Choice of Salad Dressings: House — Ranch — Italian — Poppy Seed</p>
               <p className="text-muted-foreground text-sm mt-2 font-semibold">Salad Toppings</p>
               <p className="text-muted-foreground text-sm">Tuna Salad $4.50 · Grilled Chicken $4.50 · Chicken Salad $4.50 · Grilled Sirloin Tip $5.00</p>
+            </div>
+          )}
+          {active === "Sides" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Sides</h2>
+              <p className="text-muted-foreground text-sm">Salt, Pepper, and Oregano by Request.</p>
+              <p className="text-muted-foreground text-sm mt-1">Add cheese $1.50 if not included</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
