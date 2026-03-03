@@ -63,7 +63,7 @@ const Index = () =>
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {[
         { icon: UtensilsCrossed, title: "Family Recipes", desc: "Time-honored recipes passed down since 1962" },
-        { icon: MapPin, title: "Two Coasts", desc: "Massachusetts roots, Florida sunshine" },
+        { icon: MapPin, title: "Free Delivery", desc: "Free Delivery\n$25 minimum order" },
         { icon: Clock, title: "Open Daily", desc: "Dine in, take out, or order online" }].
         map((item, i) =>
         <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp}>
