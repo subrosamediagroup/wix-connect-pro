@@ -143,7 +143,7 @@ const Index = () =>
         <h2 className="font-display text-3xl sm:text-4xl font-bold">What Our Customers Say</h2>
         <div className="mt-10 grid gap-6 sm:grid-cols-3">
           {[
-        { name: "Maria S.", text: "Best pizza I've had since visiting Italy! The family atmosphere is the cherry on top." },
+        { name: "Maria S.", text: "Best pizza I've had in Daytona Beach! The family atmosphere is the cherry on top." },
         { name: "James T.", text: "Their subs are incredible. You can taste the tradition in every bite. A new Florida favorite!" },
         { name: "The Rodriguezes", text: "Our kids love it here. Great food, friendly staff, and the outdoor patio is perfect." }].
         map((r, i) =>
