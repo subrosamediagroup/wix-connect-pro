@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
-import pizzaRayShop from "@/assets/pizza-ray-shop.png";
+import pizzaRayTruck from "@/assets/pizza-ray-truck.png";
+import pizzaRayTruckSign from "@/assets/pizza-ray-truck-sign.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -23,13 +24,47 @@ const About = () =>
       </div>
     </section>
 
-    {/* Story */}
+    {/* How It Started */}
     <section className="py-20 px-4 bg-background">
+      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayTruck} alt="Ray with the original Pizza Rays food truck" className="rounded-xl shadow-lg w-full h-96 object-cover" />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">How It Started</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">A Food Truck &amp; A Dream</motion.h2>
+          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
+            It all began in 1962 with a single turn of the key on Ray's first Pizza Rays food truck. After long hours at his day job, Ray would hit the streets, bringing his mouth-watering pizzas and submarines to local ballgames and community events. His food truck quickly became a sensation, loved by everyone who got a taste.
+          </motion.p>
+          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
+            Before long, the demand was off the charts—lines stretched far beyond the truck, and Ray knew he had something special. That's when Pizza Rays Submarines found a permanent home, where the flavors kept people coming back for more!
+          </motion.p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* The Inspiration */}
+    <section className="py-20 px-4 bg-card">
+      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-2 md:order-1">
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">The Inspiration</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Built on Pride &amp; Passion</motion.h2>
+          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
+            Pizza Rays began with my dad, who built a legacy with passion and hard work. As a kid, I grew up in the restaurant business, washing dishes, peeling potatoes, and learning the ropes with my father.
+          </motion.p>
+          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
+            From prepping fresh ingredients to crafting scratch-made soups, gravies, and desserts, he taught us the importance of pride in everything we do. He instilled in me the value of delivering nothing but the best, and the work ethic to make it happen—lessons I've carried with me through every step of my life.
+          </motion.p>
+        </motion.div>
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayTruckSign} alt="The original Pizza Rays food truck sign" className="rounded-xl shadow-lg w-full h-96 object-cover order-1 md:order-2" />
+      </div>
+    </section>
+
+    {/* Story */}
+    <section className="py-20 px-4 bg-card">
       <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
         <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} alt="Pizza Rays interior" className="rounded-xl shadow-lg w-full h-80 object-cover" src="/lovable-uploads/861ba3ab-05cc-4679-b260-e4c8c0bfb6ca.png" />
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground">Our Roots</motion.h2>
-          <motion.p variants={fadeUp} custom={1} className="mt-4 leading-relaxed text-primary">
+          <motion.p variants={fadeUp} custom={1} className="mt-4 text-muted-foreground leading-relaxed">
             In 1962, a family with a passion for authentic Italian cuisine opened the doors of Pizza Rays in Lawrence, Massachusetts. What started as a small neighborhood pizzeria quickly became a beloved institution, known for hand-tossed dough, homemade sauces, and submarines piled high with the freshest ingredients.
           </motion.p>
           <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
@@ -55,25 +90,8 @@ const About = () =>
       </div>
     </section>
 
-    {/* Old School, The Ray Way */}
-    <section className="py-20 px-4 bg-background">
-      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
-        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp} src={pizzaRayShop} alt="Original Pizza Rays storefront" className="rounded-xl shadow-lg w-full h-80 object-cover" />
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
-          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Made Old School, The Ray Way</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Keep It Old School</motion.h2>
-          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
-            My dad's vision was simple but powerful: keep it "Old School." Every dish was made with only the freshest ingredients, scratch-prepared, and served with expert care. From submarine rolls baked fresh daily to pizzas made with hand-crafted dough, blended cheeses, and his signature Italian tomato sauce, his commitment to consistency and quality built a loyal following.
-          </motion.p>
-          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
-            Customers returned time and again, not just for the food, but for the experience. This was the essence of my father's philosophy—"Old School, the Ray Way."
-          </motion.p>
-        </motion.div>
-      </div>
-    </section>
-
     {/* Values */}
-    <section className="py-20 px-4 bg-card">
+    <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="font-display text-3xl font-bold text-foreground">What We Stand For</h2>
         <div className="mt-10 grid gap-8 sm:grid-cols-3">
