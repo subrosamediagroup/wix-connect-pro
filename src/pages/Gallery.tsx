@@ -11,7 +11,7 @@ const fadeUp = {
 
 const images = [
   { src: pepperoniPizza, alt: "Our signature pepperoni pizza", label: "Signature Pizza" },
-  { src: subSandwich, alt: "Fresh Italian submarine sandwich", label: "Italian Sub" },
+  { src: subSandwich, alt: "Delicious submarine sandwich", label: "Submarines" },
   { src: restaurantInterior, alt: "Cozy indoor dining area", label: "Indoor Dining" },
   { src: outdoorPatio, alt: "Sunny outdoor patio", label: "Outdoor Patio" },
 ];
