@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import heroPizza from "@/assets/hero-pizza.jpg";
+import pepperoniPizza from "@/assets/pepperoni-pizza.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
@@ -10,7 +10,7 @@ const fadeUp = {
 };
 
 const images = [
-  { src: heroPizza, alt: "Our signature pepperoni pizza", label: "Signature Pizza" },
+  { src: pepperoniPizza, alt: "Our signature pepperoni pizza", label: "Signature Pizza" },
   { src: subSandwich, alt: "Fresh Italian submarine sandwich", label: "Italian Sub" },
   { src: restaurantInterior, alt: "Cozy indoor dining area", label: "Indoor Dining" },
   { src: outdoorPatio, alt: "Sunny outdoor patio", label: "Outdoor Patio" },
