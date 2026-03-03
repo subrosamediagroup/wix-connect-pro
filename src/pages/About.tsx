@@ -24,23 +24,6 @@ const About = () =>
       </div>
     </section>
 
-    {/* The Inspiration */}
-    <section className="py-20 px-4 bg-card">
-      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
-        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-2 md:order-1">
-          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">The Inspiration</motion.p>
-          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Built on Pride &amp; Passion</motion.h2>
-          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
-            Pizza Rays began with my dad, who built a legacy with passion and hard work. As a kid, I grew up in the restaurant business, washing dishes, peeling potatoes, and learning the ropes with my father.
-          </motion.p>
-          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
-            From prepping fresh ingredients to crafting scratch-made soups, gravies, and desserts, he taught us the importance of pride in everything we do. He instilled in me the value of delivering nothing but the best, and the work ethic to make it happen—lessons I've carried with me through every step of my life.
-          </motion.p>
-        </motion.div>
-        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayTruckSign} alt="The original Pizza Rays food truck sign" className="rounded-xl shadow-lg w-full h-96 object-cover order-1 md:order-2" />
-      </div>
-    </section>
-
     {/* How It Started */}
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
@@ -55,6 +38,23 @@ const About = () =>
             Before long, the demand was off the charts—lines stretched far beyond the truck, and Ray knew he had something special. That's when Pizza Rays Submarines found a permanent home, where the flavors kept people coming back for more!
           </motion.p>
         </motion.div>
+      </div>
+    </section>
+
+    {/* The Inspiration */}
+    <section className="py-20 px-4 bg-card">
+      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="order-2 md:order-1">
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">The Inspiration</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Built on Pride &amp; Passion</motion.h2>
+          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
+            Pizza Rays began with my dad, who built a legacy with passion and hard work. As a kid, I grew up in the restaurant business, washing dishes, peeling potatoes, and learning the ropes with my father.
+          </motion.p>
+          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
+            From prepping fresh ingredients to crafting scratch-made soups, gravies, and desserts, he taught us the importance of pride in everything we do. He instilled in me the value of delivering nothing but the best, and the work ethic to make it happen—lessons I've carried with me through every step of my life.
+          </motion.p>
+        </motion.div>
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={pizzaRayTruckSign} alt="The original Pizza Rays food truck sign" className="rounded-xl shadow-lg w-full h-96 object-cover order-1 md:order-2" />
       </div>
     </section>
 
