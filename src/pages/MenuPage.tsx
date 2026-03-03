@@ -56,6 +56,11 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Sausage", desc: "Pepper and Onion", price: "$17.99" },
     { name: "Steak Bomb", desc: "Salami, Pepper, Onion, and Mushroom", price: "$20.99" },
   ],
+  "Roast Beef": [
+    { name: "Super Beef", desc: "Rare Roast Beef on a Grilled Onion Roll, Piled Extra High", price: "$11.99" },
+    { name: "Regular Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$9.99" },
+    { name: "Junior Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$7.99" },
+  ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
     { name: "Mozzarella Sticks", desc: "Hand-breaded, served with marinara", price: "$7.99" },
@@ -169,6 +174,13 @@ const MenuPage = () => {
             <div className="text-center mb-8">
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Calzones</h2>
               <p className="text-muted-foreground text-sm">A Blend Of Mozzarella And Provolone Cheese. Marinara By Request - On The Side.</p>
+            </div>
+          )}
+          {active === "Roast Beef" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Roast Beef</h2>
+              <p className="text-muted-foreground text-sm">In-House Baked The Old School Way — Low and Slow</p>
+              <p className="text-muted-foreground text-sm mt-1">Make it a 3-Way - add $1.50: Ray's Recipe of James River BBQ Sauce, Cheese and Mayo</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
