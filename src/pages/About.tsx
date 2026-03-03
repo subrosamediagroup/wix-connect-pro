@@ -4,11 +4,11 @@ import outdoorPatio from "@/assets/outdoor-patio.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.15, duration: 0.6 } }),
+  visible: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.15, duration: 0.6 } })
 };
 
-const About = () => (
-  <>
+const About = () =>
+<>
     {/* Hero */}
     <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
       <div className="container mx-auto max-w-3xl">
@@ -25,7 +25,7 @@ const About = () => (
     {/* Story */}
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
-        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} src={restaurantInterior} alt="Pizza Rays interior" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} alt="Pizza Rays interior" className="rounded-xl shadow-lg w-full h-80 object-cover" src="/lovable-uploads/861ba3ab-05cc-4679-b260-e4c8c0bfb6ca.png" />
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <motion.h2 variants={fadeUp} custom={0} className="font-display text-3xl font-bold text-foreground">Our Roots</motion.h2>
           <motion.p variants={fadeUp} custom={1} className="mt-4 text-muted-foreground leading-relaxed">
@@ -60,20 +60,20 @@ const About = () => (
         <h2 className="font-display text-3xl font-bold text-foreground">What We Stand For</h2>
         <div className="mt-10 grid gap-8 sm:grid-cols-3">
           {[
-            { emoji: "👨‍👩‍👧‍👦", title: "Family First", desc: "We're family-owned and treat every customer like family." },
-            { emoji: "🍕", title: "Quality Ingredients", desc: "Only the freshest, highest quality ingredients go into every dish." },
-            { emoji: "❤️", title: "Community", desc: "We believe in giving back to the communities we serve." },
-          ].map((v, i) => (
-            <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp}>
+        { emoji: "👨‍👩‍👧‍👦", title: "Family First", desc: "We're family-owned and treat every customer like family." },
+        { emoji: "🍕", title: "Quality Ingredients", desc: "Only the freshest, highest quality ingredients go into every dish." },
+        { emoji: "❤️", title: "Community", desc: "We believe in giving back to the communities we serve." }].
+        map((v, i) =>
+        <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp}>
               <div className="text-4xl mb-3">{v.emoji}</div>
               <h3 className="font-display text-xl font-semibold text-foreground">{v.title}</h3>
               <p className="mt-2 text-muted-foreground text-sm">{v.desc}</p>
             </motion.div>
-          ))}
+        )}
         </div>
       </div>
     </section>
-  </>
-);
+  </>;
+
 
 export default About;
