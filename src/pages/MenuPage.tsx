@@ -88,6 +88,11 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Wine", desc: "", price: "$6.00" },
     { name: "Iced and Hot Coffee", desc: "", price: "$2.25" },
   ],
+  "Kids Menu": [
+    { name: "Kids Chicken Tenders", desc: "In-House Made Breast Meat Tenders, 2 Pieces with Side of Sauce", price: "$5.99" },
+    { name: "Kids Roast Beef", desc: "In-House Made Roast Beef on a Small Burger Roll", price: "$5.99" },
+    { name: "Kids Cheeseburger", desc: "", price: "$5.99" },
+  ],
 };
 
 const categories = Object.keys(menuData);
@@ -223,6 +228,12 @@ const MenuPage = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Sides</h2>
               <p className="text-muted-foreground text-sm">Salt, Pepper, and Oregano by Request.</p>
               <p className="text-muted-foreground text-sm mt-1">Add cheese $1.50 if not included</p>
+            </div>
+          )}
+          {active === "Kids Menu" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Kids Menu</h2>
+              <p className="text-muted-foreground text-sm">Personal-sized with Fries and Kids Drink</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
