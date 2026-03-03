@@ -60,8 +60,8 @@ const Contact = () => {
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4">
             <motion.h2 variants={fadeUp} className="font-display text-2xl font-bold text-foreground mb-6">Contact Info</motion.h2>
             {[
-              { icon: MapPin, title: "Address", text: "123 Main Street, Florida, FL 33000" },
-              { icon: Phone, title: "Phone", text: "(555) 123-4567" },
+              { icon: MapPin, title: "Address", text: "3340 S. Nova Road, Port Orange, FL 32129" },
+              { icon: Phone, title: "Phone", text: "386-366-7805" },
               { icon: Mail, title: "Email", text: "info@pizzarays.com" },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i + 1}>

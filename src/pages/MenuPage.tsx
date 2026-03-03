@@ -260,8 +260,8 @@ const MenuPage = () => {
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-sm mb-4">Ready to order? Call us or visit in person!</p>
-            <a href="tel:+15551234567">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">Order Now — (555) 123-4567</Button>
+            <a href="tel:+13863667805">
+              <Button size="lg" className="bg-primary hover:bg-primary/90">Order Now — (386) 366-7805</Button>
             </a>
           </div>
         </div>
