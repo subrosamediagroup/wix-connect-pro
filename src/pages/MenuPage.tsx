@@ -11,7 +11,7 @@ const fadeUp = {
 type MenuItem = { name: string; desc: string; price: string };
 
 const menuData: Record<string, MenuItem[]> = {
-  "Italian Style Pizza": [],
+  "Build Your Own Pizza": [],
   "Specialty Pizzas": [
     { name: "White", desc: "White Sauce and Cheese. Available as Calzone.", price: "Sm $14.99 / Lg $18.99" },
     { name: "White Spinach", desc: "Feta Cheese. Available as Calzone.", price: "Sm $17.99 / Lg $21.99" },
@@ -106,7 +106,7 @@ const MenuPage = () => {
           </div>
 
           {/* Items */}
-          {active === "Italian Style Pizza" ? (
+          {active === "Build Your Own Pizza" ? (
             <div className="max-w-2xl mx-auto">
               <motion.div initial="hidden" animate="visible" variants={fadeUp}>
                 <Card className="border bg-card">
