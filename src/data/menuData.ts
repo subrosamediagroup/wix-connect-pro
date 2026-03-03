@@ -94,3 +94,10 @@ export function parsePrice(priceStr: string): number {
   const match = priceStr.match(/\$(\d+\.?\d*)/);
   return match ? parseFloat(match[1]) : 0;
 }
+
+/** Check if an item has small/large pricing and return both prices */
+export function parseSizes(priceStr: string): { small: number; large: number } | null {
+  const match = priceStr.match(/Sm\s*\$(\d+\.?\d*)\s*\/\s*Lg\s*\$(\d+\.?\d*)/);
+  if (!match) return null;
+  return { small: parseFloat(match[1]), large: parseFloat(match[2]) };
+}
