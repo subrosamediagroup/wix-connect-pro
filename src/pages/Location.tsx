@@ -23,7 +23,7 @@ const Location = () => (
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="rounded-xl overflow-hidden shadow-lg bg-muted min-h-[350px] flex items-center justify-center">
             <iframe
               title="Pizza Rays Location"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224444.5!2d-80.3!3d25.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDQ4JzAwLjAiTiA4MMKwMTgnMDAuMCJX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.0!2d-81.0731!3d29.1283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e6d8a1f2e5b3c7%3A0x1!2s3340+S+Nova+Rd%2C+Port+Orange%2C+FL+32129!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
               width="100%"
               height="100%"
               style={{ border: 0, minHeight: 350 }}
