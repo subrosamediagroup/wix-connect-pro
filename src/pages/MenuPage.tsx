@@ -121,6 +121,13 @@ const MenuPage = () => {
               </motion.div>
             </div>
           ) : (
+          <>
+          {active === "Specialty Pizzas" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Specialty Pizzas</h2>
+              <p className="text-muted-foreground text-sm">All Specialty Pizzas Are Available As Calzones</p>
+            </div>
+          )}
           <div className="grid gap-4 sm:grid-cols-2">
             {menuData[active].map((item, i) => (
               <motion.div key={item.name} initial="hidden" animate="visible" custom={i} variants={fadeUp}>
@@ -136,6 +143,7 @@ const MenuPage = () => {
               </motion.div>
             ))}
           </div>
+          </>
           )}
 
           <div className="mt-12 text-center">
