@@ -43,6 +43,8 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Chicken Tender Parm", desc: "In-House Made Breast Meat Tenders", price: "$12.99" },
     { name: "Cheeseburger Sub", desc: "", price: "$12.99" },
     { name: "French Dip", desc: "", price: "$13.99" },
+    { name: "Steak & Cheese", desc: "Steak with Grilled Peppers, Onions, Mushrooms, and Provolone Cheese", price: "$12.99" },
+    { name: "Steak & Cheese Bomb", desc: "Steak with Grilled Peppers, Onions, Mushrooms, Salami, and Provolone Cheese", price: "$13.99" },
   ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
