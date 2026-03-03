@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
+import pizzaRayShop from "@/assets/pizza-ray-shop.png";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -57,7 +58,7 @@ const About = () =>
     {/* Old School, The Ray Way */}
     <section className="py-20 px-4 bg-background">
       <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
-        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp} src={restaurantInterior} alt="Pizza Rays old school cooking" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp} src={pizzaRayShop} alt="Original Pizza Rays storefront" className="rounded-xl shadow-lg w-full h-80 object-cover" />
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
           <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Made Old School, The Ray Way</motion.p>
           <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Keep It Old School</motion.h2>
