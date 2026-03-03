@@ -61,6 +61,12 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Regular Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$9.99" },
     { name: "Junior Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$7.99" },
   ],
+  "Ray's FC Tenders": [
+    { name: "4 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$8.99" },
+    { name: "6 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$13.99" },
+    { name: "8 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$17.99" },
+    { name: "12 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$25.99" },
+  ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
     { name: "Mozzarella Sticks", desc: "Hand-breaded, served with marinara", price: "$7.99" },
@@ -181,6 +187,20 @@ const MenuPage = () => {
               <h2 className="font-display text-2xl font-bold text-foreground mb-2">Roast Beef</h2>
               <p className="text-muted-foreground text-sm">In-House Baked The Old School Way — Low and Slow</p>
               <p className="text-muted-foreground text-sm mt-1">Make it a 3-Way - add $1.50: Ray's Recipe of James River BBQ Sauce, Cheese and Mayo</p>
+            </div>
+          )}
+          {active === "Burgers" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Burgers</h2>
+              <p className="text-muted-foreground text-sm">Comes with Lettuce, Tomato, Onion, and Pickle. Served on a Grilled Burger Roll.</p>
+              <p className="text-muted-foreground text-sm mt-1">Add Bacon $2.00</p>
+            </div>
+          )}
+          {active === "Ray's FC Tenders" && (
+            <div className="text-center mb-8">
+              <h2 className="font-display text-2xl font-bold text-foreground mb-2">Ray's FC Tenders</h2>
+              <p className="text-muted-foreground text-sm">In-House Made Strips of Breast Meat, Original or Grilled with Choice of Sauce.</p>
+              <p className="text-muted-foreground text-sm mt-1">Sauces: Buffalo — Ranch — BBQ</p>
             </div>
           )}
           <div className="grid gap-4 sm:grid-cols-2">
