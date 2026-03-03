@@ -54,8 +54,25 @@ const About = () =>
       </div>
     </section>
 
-    {/* Values */}
+    {/* Old School, The Ray Way */}
     <section className="py-20 px-4 bg-background">
+      <div className="container mx-auto max-w-5xl grid gap-12 md:grid-cols-2 items-center">
+        <motion.img initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeUp} src={restaurantInterior} alt="Pizza Rays old school cooking" className="rounded-xl shadow-lg w-full h-80 object-cover" />
+        <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+          <motion.p variants={fadeUp} custom={0} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Made Old School, The Ray Way</motion.p>
+          <motion.h2 variants={fadeUp} custom={1} className="font-display text-3xl font-bold text-foreground mt-2">Keep It Old School</motion.h2>
+          <motion.p variants={fadeUp} custom={2} className="mt-4 text-muted-foreground leading-relaxed">
+            My dad's vision was simple but powerful: keep it "Old School." Every dish was made with only the freshest ingredients, scratch-prepared, and served with expert care. From submarine rolls baked fresh daily to pizzas made with hand-crafted dough, blended cheeses, and his signature Italian tomato sauce, his commitment to consistency and quality built a loyal following.
+          </motion.p>
+          <motion.p variants={fadeUp} custom={3} className="mt-4 text-muted-foreground leading-relaxed">
+            Customers returned time and again, not just for the food, but for the experience. This was the essence of my father's philosophy—"Old School, the Ray Way."
+          </motion.p>
+        </motion.div>
+      </div>
+    </section>
+
+    {/* Values */}
+    <section className="py-20 px-4 bg-card">
       <div className="container mx-auto max-w-4xl text-center">
         <h2 className="font-display text-3xl font-bold text-foreground">What We Stand For</h2>
         <div className="mt-10 grid gap-8 sm:grid-cols-3">
