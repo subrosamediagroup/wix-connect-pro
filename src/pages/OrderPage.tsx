@@ -64,19 +64,21 @@ const OrderPage = () => {
             {(menuData[active] || []).map((item, i) => (
               <motion.div key={item.name} initial="hidden" animate="visible" custom={i} variants={fadeUp}>
                 <Card className="h-full border bg-card hover:shadow-md transition-shadow">
-                  <CardContent className="p-5 flex items-center gap-4">
-                    <div className="flex-1 min-w-0">
+                  <CardContent className="p-5 flex flex-col gap-3">
+                    <div>
                       <h3 className="font-display text-lg font-semibold text-foreground">{item.name}</h3>
                       {item.desc && <p className="text-muted-foreground text-sm mt-1">{item.desc}</p>}
                     </div>
-                    <span className="font-display text-lg font-bold text-primary whitespace-nowrap">{item.price}</span>
-                    <Button
-                      size="icon"
-                      className="shrink-0 bg-primary hover:bg-primary/90 h-9 w-9"
-                      onClick={() => handleAdd(active, item.name, item.price)}
-                    >
-                      <Plus className="h-4 w-4" />
-                    </Button>
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="font-display text-lg font-bold text-primary">{item.price}</span>
+                      <Button
+                        size="sm"
+                        className="shrink-0 bg-primary hover:bg-primary/90 gap-1.5"
+                        onClick={() => handleAdd(active, item.name, item.price)}
+                      >
+                        <Plus className="h-4 w-4" /> Add
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
