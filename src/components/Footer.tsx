@@ -35,7 +35,7 @@ const Footer = () =>
         <div>
           <h4 className="font-display text-lg font-semibold mb-4">Hours</h4>
           <div className="space-y-2 text-sm text-primary-foreground/70">
-            <div className="flex items-start gap-2"><Clock className="h-4 w-4 mt-0.5 shrink-0 text-primary" /><div><p>Mon – Thu: 11am – 9pm</p><p>Fri – Sat: 11am – 10pm</p><p>Sun: 12pm – 8pm</p></div></div>
+            <div className="flex items-start gap-2"><Clock className="h-4 w-4 mt-0.5 shrink-0 text-primary" /><div><p>Mon – Sat  10am – 9pm</p></div></div>
           </div>
         </div>
 
@@ -46,7 +46,7 @@ const Footer = () =>
             <a href="#" className="flex items-center gap-2 hover:text-primary transition-colors font-normal"><MapPin className="h-4 w-4 text-primary shrink-0" />3340 S. Nova Rd
 Port Orange, FL  322129
           </a>
-            <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone className="h-4 w-4 text-primary shrink-0" /> (555) 123-4567</a>
+            <a href="tel:+13863667805" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone className="h-4 w-4 text-primary shrink-0" /> (386) 366-7805</a>
             <a href="mailto:info@pizzarays.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail className="h-4 w-4 text-primary shrink-0" /> info@pizzarays.com</a>
           </div>
         </div>
