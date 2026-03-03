@@ -11,14 +11,7 @@ const fadeUp = {
 type MenuItem = { name: string; desc: string; price: string };
 
 const menuData: Record<string, MenuItem[]> = {
-  "Classic Pizzas": [
-    { name: "Cheese Pizza", desc: "Our signature hand-tossed dough with rich tomato sauce and premium mozzarella", price: "$12.99" },
-    { name: "Pepperoni", desc: "Loaded with crispy pepperoni and melted mozzarella", price: "$14.99" },
-    { name: "Sausage & Peppers", desc: "Italian sausage, roasted peppers, onions, mozzarella", price: "$15.99" },
-    { name: "Margherita", desc: "Fresh mozzarella, tomatoes, basil, olive oil", price: "$14.99" },
-    { name: "Hawaiian", desc: "Ham, pineapple, mozzarella", price: "$14.99" },
-    { name: "Meat Lovers", desc: "Pepperoni, sausage, ham, bacon, mozzarella", price: "$17.99" },
-  ],
+  "Italian Style Pizza": [],
   "Specialty Pizzas": [
     { name: "The Lawrence Original", desc: "Our 1962 secret recipe — a customer favorite for decades", price: "$18.99" },
     { name: "Florida Sunshine", desc: "Grilled chicken, sun-dried tomatoes, artichoke hearts, garlic", price: "$17.99" },
@@ -84,6 +77,53 @@ const MenuPage = () => {
           </div>
 
           {/* Items */}
+          {active === "Italian Style Pizza" ? (
+            <div className="max-w-2xl mx-auto">
+              <motion.div initial="hidden" animate="visible" variants={fadeUp}>
+                <Card className="border bg-card">
+                  <CardContent className="p-6 sm:p-8">
+                    <h2 className="font-display text-2xl font-bold text-foreground mb-2">ITALIAN-STYLE PIZZA</h2>
+                    <p className="text-muted-foreground text-sm mb-6">
+                      Thin Crust With In-house Made Dough, Sauce, and Our Own Blended Mozzarella
+                    </p>
+
+                    {/* Size & Cheese Price */}
+                    <div className="mb-6">
+                      <div className="grid grid-cols-3 gap-4 font-display font-semibold text-foreground border-b pb-2 mb-2">
+                        <span></span>
+                        <span className="text-center">Small 12"</span>
+                        <span className="text-center">Large 16"</span>
+                      </div>
+                      <div className="grid grid-cols-3 gap-4 items-center">
+                        <span className="font-semibold text-foreground">Cheese</span>
+                        <span className="text-center text-primary font-bold">$12.99</span>
+                        <span className="text-center text-primary font-bold">$16.99</span>
+                      </div>
+                    </div>
+
+                    {/* Toppings */}
+                    <h3 className="font-display text-lg font-semibold text-foreground mb-3">Choice of Toppings</h3>
+
+                    <div className="mb-4">
+                      <p className="font-semibold text-foreground text-sm">Meat: $2.00 per topping</p>
+                      <p className="text-muted-foreground text-sm">
+                        Bacon, Ham, Sweet Sausage, Pepperoni, Meatball, Ground Beef
+                      </p>
+                    </div>
+
+                    <div className="mb-4">
+                      <p className="font-semibold text-foreground text-sm">Veggies: $1.50 per topping</p>
+                      <p className="text-muted-foreground text-sm">
+                        Mushroom, Pepper, Onion, Tomato, Black Olive, Pineapple, Fresh Spinach, Fresh Pressed Garlic
+                      </p>
+                    </div>
+
+                    <p className="font-semibold text-foreground text-sm">Extra Cheese $1.50</p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          ) : (
           <div className="grid gap-4 sm:grid-cols-2">
             {menuData[active].map((item, i) => (
               <motion.div key={item.name} initial="hidden" animate="visible" custom={i} variants={fadeUp}>
@@ -99,6 +139,7 @@ const MenuPage = () => {
               </motion.div>
             ))}
           </div>
+          )}
 
           <div className="mt-12 text-center">
             <p className="text-muted-foreground text-sm mb-4">Ready to order? Call us or visit in person!</p>
