@@ -36,7 +36,7 @@ const Index = () =>
             </Button>
           </Link>
           <Link to="/location">
-            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8">
+            <Button size="lg" variant="outline" className="border-primary-foreground/30 text-foreground hover:bg-primary-foreground/10 text-lg px-8">
               Visit Us
             </Button>
           </Link>
