@@ -93,6 +93,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Kids Roast Beef", desc: "In-House Made Roast Beef on a Small Burger Roll", price: "$5.99" },
     { name: "Kids Cheeseburger", desc: "", price: "$5.99" },
   ],
+  Burgers: [
+    { name: "Hamburger", desc: "", price: "$5.99" },
+    { name: "Cheeseburger", desc: "Cheese: Provolone, American, Swiss, Mozzarella", price: "$6.99" },
+  ],
 };
 
 const categories = Object.keys(menuData);
