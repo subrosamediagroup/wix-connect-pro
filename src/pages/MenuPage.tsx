@@ -62,10 +62,10 @@ const menuData: Record<string, MenuItem[]> = {
     { name: "Junior Beef", desc: "Rare Roast Beef on a Grilled Burger Roll", price: "$7.99" },
   ],
   "Ray's FC Tenders": [
-    { name: "4 Piece", desc: "Original or Grilled with Choice of Sauce", price: "$8.99" },
-    { name: "6 Piece", desc: "Original or Grilled with Choice of Sauce", price: "$13.99" },
-    { name: "8 Piece", desc: "Original or Grilled with Choice of Sauce", price: "$17.99" },
-    { name: "12 Piece", desc: "Original or Grilled with Choice of Sauce", price: "$25.99" },
+    { name: "4 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$8.99" },
+    { name: "6 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$13.99" },
+    { name: "8 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$17.99" },
+    { name: "12 Ct", desc: "Original or Grilled with Choice of Sauce", price: "$25.99" },
   ],
   Sides: [
     { name: "Garlic Knots", desc: "Fresh-baked, brushed with garlic butter and herbs", price: "$5.99" },
