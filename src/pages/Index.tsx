@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
-import { UtensilsCrossed, MapPin, Clock, Star, ArrowRight } from "lucide-react";
+import { UtensilsCrossed, Car, Clock, Star, ArrowRight } from "lucide-react";
 import heroPizza from "@/assets/hero-pizza.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
@@ -63,7 +63,7 @@ const Index = () =>
         <div className="mt-14 grid gap-6 sm:grid-cols-3">
           {[
         { icon: UtensilsCrossed, title: "Family Recipes", desc: "Time-honored recipes passed down since 1962" },
-        { icon: MapPin, title: "Free Delivery", desc: "Free Delivery\n$25 minimum order" },
+        { icon: Car, title: "Free Delivery", desc: "Free Delivery\n$25 minimum order" },
         { icon: Clock, title: "Open Daily", desc: "Dine in, take out, or order online" }].
         map((item, i) =>
         <motion.div key={i} initial="hidden" whileInView="visible" viewport={{ once: true }} custom={i} variants={fadeUp}>
