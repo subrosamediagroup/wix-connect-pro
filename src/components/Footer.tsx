@@ -43,7 +43,9 @@ const Footer = () =>
         <div>
           <h4 className="font-display text-lg font-semibold mb-4">Contact</h4>
           <div className="space-y-3 text-sm text-primary-foreground/70">
-            <a href="#" className="flex items-center gap-2 hover:text-primary transition-colors"><MapPin className="h-4 w-4 text-primary shrink-0" /> 123 Main St, Florida</a>
+            <a href="#" className="flex items-center gap-2 hover:text-primary transition-colors font-normal"><MapPin className="h-4 w-4 text-primary shrink-0" />3340 S. Nova Rd
+Port Orange, FL  322129
+          </a>
             <a href="tel:+15551234567" className="flex items-center gap-2 hover:text-primary transition-colors"><Phone className="h-4 w-4 text-primary shrink-0" /> (555) 123-4567</a>
             <a href="mailto:info@pizzarays.com" className="flex items-center gap-2 hover:text-primary transition-colors"><Mail className="h-4 w-4 text-primary shrink-0" /> info@pizzarays.com</a>
           </div>
@@ -55,6 +57,4 @@ const Footer = () =>
       </div>
     </div>
   </footer>;
-
-
 export default Footer;
