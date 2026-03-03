@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { menuData, parsePrice, parseSizes } from "@/data/menuData";
+import BuildYourOwnPizza from "@/components/BuildYourOwnPizza";
 import { useCart } from "@/context/CartContext";
 import { useToast } from "@/hooks/use-toast";
 
@@ -12,7 +13,7 @@ const fadeUp = {
   visible: (i: number = 0) => ({ opacity: 1, y: 0, transition: { delay: i * 0.05, duration: 0.4 } }),
 };
 
-const orderCategories = Object.keys(menuData).filter((c) => menuData[c].length > 0);
+const orderCategories = Object.keys(menuData);
 
 const SizeableItem = ({
   item,
@@ -130,11 +131,15 @@ const OrderPage = () => {
             ))}
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-2">
-            {(menuData[active] || []).map((item, i) => (
-              <SizeableItem key={item.name} item={item} category={active} index={i} />
-            ))}
-          </div>
+          {active === "Build Your Own Pizza" ? (
+            <BuildYourOwnPizza />
+          ) : (
+            <div className="grid gap-4 sm:grid-cols-2">
+              {(menuData[active] || []).map((item, i) => (
+                <SizeableItem key={item.name} item={item} category={active} index={i} />
+              ))}
+            </div>
+          )}
 
           {totalItems > 0 && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mt-8 text-center">
