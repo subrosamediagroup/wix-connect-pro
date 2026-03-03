@@ -36,9 +36,9 @@ const Location = () => (
           {/* Info */}
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-6">
             {[
-              { icon: MapPin, title: "Address", content: "123 Main Street\nFlorida, FL 33000" },
-              { icon: Phone, title: "Phone", content: "(555) 123-4567" },
-              { icon: Clock, title: "Hours", content: "Mon – Thu: 11am – 9pm\nFri – Sat: 11am – 10pm\nSun: 12pm – 8pm" },
+              { icon: MapPin, title: "Address", content: "3340 S. Nova Road\nPort Orange, FL. 32129" },
+              { icon: Phone, title: "Phone", content: "386-366-7805" },
+              { icon: Clock, title: "Hours", content: "Mon - Sat  10am - 9pm\nClosed Sunday" },
             ].map((item, i) => (
               <motion.div key={i} variants={fadeUp} custom={i}>
                 <Card className="border bg-card">
