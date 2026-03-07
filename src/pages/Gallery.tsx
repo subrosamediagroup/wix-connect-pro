@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import pepperoniPizza from "@/assets/pepperoni-pizza.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
@@ -38,6 +39,11 @@ const images = [
 
 const Gallery = () => (
   <>
+    <SEOHead
+      title="Photo Gallery | Pizza Rays — Port Orange, FL"
+      description="See photos of our signature pizzas, submarines, dining room & outdoor patio at Pizza Rays in Port Orange, Florida."
+      canonical="https://pizzarays.com/gallery"
+    />
     <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
       <div className="container mx-auto max-w-3xl">
         <motion.p initial="hidden" animate="visible" variants={fadeUp} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Gallery</motion.p>

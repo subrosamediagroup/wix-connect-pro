@@ -3,7 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { UtensilsCrossed, Car, Clock, Star, ArrowRight } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 import heroPizza from "@/assets/hero-pizza.jpg";
+import subSandwich from "@/assets/sub-sandwich.jpg";
+import restaurantInterior from "@/assets/restaurant-interior.jpg";
+import outdoorPatio from "@/assets/outdoor-patio.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
@@ -15,6 +19,11 @@ const fadeUp = {
 
 const Index = () =>
 <>
+    <SEOHead
+      title="Pizza Rays | Best Pizza & Subs Near Me in Port Orange, FL"
+      description="Pizza Rays — family-owned pizzeria since 1962 serving the best pizza, subs, and calzones near you in Port Orange, Daytona Beach & South Daytona FL. Free delivery!"
+      canonical="https://pizzarays.com/"
+    />
     {/* Hero */}
     <section className="relative h-[90vh] min-h-[600px] flex items-center justify-center overflow-hidden">
       <img src={heroPizza} alt="Freshly baked pizza at Pizza Rays" className="absolute inset-0 h-full w-full object-cover" />

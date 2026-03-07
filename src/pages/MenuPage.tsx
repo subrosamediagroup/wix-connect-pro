@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import menuHero from "@/assets/menu-hero.png";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import SEOHead from "@/components/SEOHead";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -108,6 +109,11 @@ const MenuPage = () => {
 
   return (
     <>
+      <SEOHead
+        title="Menu | Pizza, Subs & Calzones — Pizza Rays Port Orange, FL"
+        description="View the full Pizza Rays menu: specialty pizzas, build-your-own pizza, hot & cold submarines, calzones, sides & more. Order online for pickup or delivery in Port Orange."
+        canonical="https://pizzarays.com/menu"
+      />
       <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center overflow-hidden">
         <img src={menuHero} alt="" className="absolute inset-0 w-full h-full object-cover opacity-50" />
         <div className="relative container mx-auto max-w-3xl">

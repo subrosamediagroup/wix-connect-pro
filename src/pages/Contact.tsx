@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import SEOHead from "@/components/SEOHead";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -28,6 +29,11 @@ const Contact = () => {
 
   return (
     <>
+      <SEOHead
+        title="Contact Pizza Rays | Port Orange, FL Pizzeria"
+        description="Contact Pizza Rays Submarines in Port Orange, FL. Call (386) 366-7805 or send us a message. We're located at 3340 S Nova Rd near Daytona Beach."
+        canonical="https://pizzarays.com/contact"
+      />
       <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
         <div className="container mx-auto max-w-3xl">
           <motion.p initial="hidden" animate="visible" variants={fadeUp} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Get in Touch</motion.p>

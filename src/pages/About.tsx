@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import SEOHead from "@/components/SEOHead";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
 import pizzaRayTruck from "@/assets/pizza-ray-truck.png";
@@ -12,6 +13,11 @@ const fadeUp = {
 
 const About = () =>
 <>
+    <SEOHead
+      title="About Pizza Rays | Family Pizzeria Since 1962 — Port Orange, FL"
+      description="Learn about Pizza Rays Submarines, a family-owned pizzeria established in 1962 in Lawrence, MA, now proudly serving Port Orange, Daytona Beach, and South Daytona, Florida."
+      canonical="https://pizzarays.com/about"
+    />
     {/* Hero */}
     <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
       <div className="container mx-auto max-w-3xl">
