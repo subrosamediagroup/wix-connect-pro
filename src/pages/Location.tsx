@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, Phone, Clock, Car, Sun, Wifi } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -9,6 +10,11 @@ const fadeUp = {
 
 const Location = () => (
   <>
+    <SEOHead
+      title="Location & Hours | Pizza Rays — 3340 S Nova Rd, Port Orange FL"
+      description="Find Pizza Rays at 3340 S Nova Rd, Port Orange FL 32129. Open Mon–Sat 10am–9pm. Free delivery, outdoor patio, free Wi-Fi. Pizza & subs near Daytona Beach."
+      canonical="https://pizzarays.com/location"
+    />
     <section className="relative py-24 px-4 bg-foreground text-primary-foreground text-center">
       <div className="container mx-auto max-w-3xl">
         <motion.p initial="hidden" animate="visible" variants={fadeUp} className="text-primary font-semibold text-sm uppercase tracking-[0.3em]">Find Us</motion.p>

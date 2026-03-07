@@ -24,24 +24,56 @@
       "@context": "https://schema.org",
       "@type": "Restaurant",
       "name": "Pizza Rays Submarines",
-      "image": "",
+      "alternateName": "Pizza Rays",
+      "image": "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/62560674-f2c8-4b6c-b542-e103dc2972dd/id-preview-b3a5f1e3--ed43ed17-477c-42ef-b84e-83912367401f.lovable.app-1772560073217.png",
       "url": "https://pizzarays.com",
-      "telephone": "(555) 123-4567",
+      "telephone": "+13863667805",
+      "email": "info@pizzarays.com",
+      "menu": "https://pizzarays.com/menu",
+      "acceptsReservations": "false",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "123 Main Street",
+        "streetAddress": "3340 S Nova Rd",
+        "addressLocality": "Port Orange",
         "addressRegion": "FL",
-        "postalCode": "33000",
+        "postalCode": "32129",
         "addressCountry": "US"
       },
-      "servesCuisine": ["Pizza", "Italian", "Submarines"],
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 29.1283,
+        "longitude": -81.0731
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Port Orange" },
+        { "@type": "City", "name": "Daytona Beach" },
+        { "@type": "City", "name": "South Daytona" },
+        { "@type": "City", "name": "New Smyrna Beach" }
+      ],
+      "servesCuisine": ["Pizza", "Italian", "Submarines", "Subs", "Calzones"],
       "priceRange": "$$",
       "foundingDate": "1962",
+      "description": "Family-owned pizzeria est. 1962 in Lawrence, MA. Now serving classic pizzas, hearty submarines, and calzones in Port Orange, Florida. Free delivery with $25 minimum.",
+      "hasMenu": {
+        "@type": "Menu",
+        "url": "https://pizzarays.com/menu",
+        "hasMenuSection": [
+          { "@type": "MenuSection", "name": "Specialty Pizzas" },
+          { "@type": "MenuSection", "name": "Build Your Own Pizza" },
+          { "@type": "MenuSection", "name": "Cold Submarines" },
+          { "@type": "MenuSection", "name": "Hot Submarines" },
+          { "@type": "MenuSection", "name": "Sides" }
+        ]
+      },
       "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "21:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "22:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "20:00" }
-      ]
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" }
+      ],
+      "sameAs": [],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "150"
+      }
     }
     </script>
     <meta property="og:title" content="Pizza Rays | Authentic Pizza &amp; Subs Since 1962">
