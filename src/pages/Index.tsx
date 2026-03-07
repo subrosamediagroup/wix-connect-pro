@@ -8,9 +8,6 @@ import heroPizza from "@/assets/hero-pizza.jpg";
 import subSandwich from "@/assets/sub-sandwich.jpg";
 import restaurantInterior from "@/assets/restaurant-interior.jpg";
 import outdoorPatio from "@/assets/outdoor-patio.jpg";
-import subSandwich from "@/assets/sub-sandwich.jpg";
-import restaurantInterior from "@/assets/restaurant-interior.jpg";
-import outdoorPatio from "@/assets/outdoor-patio.jpg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
